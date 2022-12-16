@@ -34,7 +34,7 @@ JWT token recieved in the String format can be used to verify and extract audien
 ```java
 //verify and use
 JWebToken incomingToken = new JWebToken(bearerToken);
-if (!incomingToken.isValid()) {
+if (incomingToken.isValid()) {
     String audience = incomingToken.getAudience();
     String subject = incomingToken.getSubject();
 }
